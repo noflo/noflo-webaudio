@@ -1,4 +1,4 @@
-noflo-webaudio
+(WIP) noflo-webaudio
 ==============
 
 NoFlo components for Web Audio API.
