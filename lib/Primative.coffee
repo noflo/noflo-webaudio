@@ -87,7 +87,7 @@ class exports.Primative extends noflo.Component
         arr.push obj
       return arr
 
-  # Generates an unique ID 
+  # Generates an unique ID
   # (http://coffeescriptcookbook.com/chapters/strings/generating-a-unique-id)
   uniqueId: (length=8) ->
     id = ""
