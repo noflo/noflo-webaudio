@@ -27,8 +27,13 @@
     "mocha": "^3.2.0",
     "grunt-mocha-phantomjs": "^4.0.0",
     "grunt-mocha-test": "^0.13.2",
-    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0"
   },
-  "keywords": ["noflo", "audio", "webaudio", "webaudioapi"]
+  "keywords": [
+    "noflo",
+    "audio",
+    "webaudio",
+    "webaudioapi"
+  ]
 }
