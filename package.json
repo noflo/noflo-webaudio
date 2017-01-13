@@ -8,14 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/automata/noflo-webaudio.git"
+    "url": "git://github.com/noflo/noflo-webaudio.git"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "undefined/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": "MIT",
   "dependencies": {
     "noflo": "~0.x >= 0.5"
   },
