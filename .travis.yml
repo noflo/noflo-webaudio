@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- 4
+sudo: false
+before_script:
+- npm install -g grunt-cli
+deploy:
+  provider: npm
+  email: vilson@void.cc
+  api_key:
+    secure: R0YFdV+WqR7s5836z4v13JMXOX+QsfiRYaeZ6bGl+DmxtlNRontzhjQ3i4R4fJ/Ylxp883vxewZ2ofRN4dj1kU8unBXcsxf9PA2HrC4XmbH+0EoFgQsC6Ne93MUgX4GdQSys9XCDXZ25MRwq6cgYvKrq8DgYC7io3isiOkRQMhs=
+  on:
+    tags: true
+    repo: noflo/noflo-webaudio

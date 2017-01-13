@@ -1,7 +1,7 @@
 {
   "name": "noflo-webaudio",
   "description": "NoFlo components for Web Audio API.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Vilson Vieira",
     "email": "vilson@void.cc"
@@ -17,22 +17,18 @@
     }
   ],
   "dependencies": {
-    "noflo": "~0.5.0"
+    "noflo": "~0.x >= 0.5"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-coffee": "~0.6.6",
-    "grunt-coffeelint": "~0.0.6",
-    "grunt-cafe-mocha": "~0.1.2",
-    "chai": "~1.5.0",
-    "mocha": "~1.9.0",
-    "grunt-mocha-phantomjs": "~0.2.2",
-    "grunt-component-build": "~0.2.7",
-    "grunt-contrib-uglify": "~2.0.0",
-    "grunt-contrib-watch": "~0.3.1",
-    "component-json": "~0.1.4",
-    "grunt-combine": "~0.8.3",
-    "grunt-component": "~0.1.2"
+    "grunt": "^1.0.1",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-coffeelint": "^0.0.16",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "grunt-mocha-phantomjs": "^4.0.0",
+    "grunt-mocha-test": "^0.13.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
   },
   "keywords": [
     "noflo",

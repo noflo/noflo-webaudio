@@ -117,7 +117,8 @@ class Play extends noflo.Component
       if @buffer_data[params.id]?
         @updateBuffer(audioNode, params.id)
         # Plays only on update
-        audioNode.start params.start.time, params.start.offset, params.start.duration
+        {time, offset, duration} = params.start
+        audioNode.start time, offset, duration
     else
       # create
       audioNode = @context.createBufferSource()
