@@ -1,6 +1,8 @@
 noflo = require 'noflo'
 {Primative} = require '../lib/Primative'
 
+# @runtime noflo-browser
+
 class Oscillator extends Primative
   description: 'Create an audio source with a periodic waveform ' +
                '(sine, square, sawtooth, triangle, custom)'

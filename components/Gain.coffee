@@ -1,6 +1,8 @@
 noflo = require 'noflo'
 {Primative} = require '../lib/Primative'
 
+# @runtime noflo-browser
+
 class Gain extends Primative
   description: 'Multiplies the input audio signal by the given gain value, ' +
                'changing its amplitude.'

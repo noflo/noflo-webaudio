@@ -1,6 +1,8 @@
 noflo = require 'noflo'
 {Primative} = require '../lib/Primative'
 
+# @runtime noflo-browser
+
 class AudioFile extends Primative
   description: 'Create an audio source loading a sound file'
   icon: 'file-audio-o'

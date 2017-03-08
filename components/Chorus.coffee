@@ -1,6 +1,8 @@
 noflo = require 'noflo'
 {Primative} = require '../lib/Primative'
 
+# @runtime noflo-browser
+
 class Chorus extends Primative
   description: 'Basic chorus effect (TUNA)'
   icon: 'group'

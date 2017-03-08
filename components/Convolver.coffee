@@ -1,6 +1,8 @@
 noflo = require 'noflo'
 {Primative} = require '../lib/Primative'
 
+# @runtime noflo-browser
+
 class Convolver extends Primative
   description: 'Applies impulse response data to a given audio signal'
   icon: 'share-alt'

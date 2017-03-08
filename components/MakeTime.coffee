@@ -1,7 +1,8 @@
 noflo = require 'noflo'
 {Primative} = require '../lib/Primative'
 
-# FIXME: Should be a Primative?
+# @runtime noflo-browser
+
 class MakeTime extends Primative
   description: 'Creates one or more time events'
   icon: 'clock-o'

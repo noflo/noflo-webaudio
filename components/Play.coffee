@@ -1,6 +1,8 @@
 noflo = require 'noflo'
 Tuna = require '../vendor/tuna.js'
 
+# @runtime noflo-browser
+
 class Play extends noflo.Component
   description: 'Plays given chains and patterns'
   icon: 'play'

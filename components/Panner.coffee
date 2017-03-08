@@ -1,6 +1,8 @@
 noflo = require 'noflo'
 {Primative} = require '../lib/Primative'
 
+# @runtime noflo-browser
+
 class Panner extends Primative
   description: 'Changes the location of a given audio source'
   icon: 'compass'
