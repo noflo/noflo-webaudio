@@ -17,6 +17,7 @@ class Play extends noflo.Component
 
     @inPorts =
       audionodes: new noflo.ArrayPort 'object'
+    @outPorts = {}
 
     @inPorts.audionodes.on 'data', (audionodes, i) =>
       @audionodes[i] = audionodes

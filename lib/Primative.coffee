@@ -11,8 +11,7 @@ class exports.Primative extends noflo.Component
 
     @inPorts = new noflo.InPorts ports
     @outPorts = new noflo.OutPorts()
-    @outPorts[type] = new noflo.OutPort
-      name: type
+    @outPorts.add type,
       datatype: 'object'
     # Autosend on attach
     @outPorts[type].on 'attach', @compute.bind(@)
