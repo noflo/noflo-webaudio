@@ -69,13 +69,7 @@ class PlayCommands
       # FIXME: How to deal with start?
       audioNode.start params.start
       @table_audionodes[params.id] = audioNode
-    waveforms =
-      sine: 0
-      square: 1
-      sawtooth: 2
-      triangle: 3
-    waveform_num = waveforms[params.waveform]
-    audioNode.type = waveform_num
+    audioNode.type = params.waveform
     audioNode.frequency.value = params.frequency
     #audioNode.start params.start
     return audioNode
@@ -156,12 +150,16 @@ exports.getComponent = ->
       input.hasData ['audionodes', idx]
     return unless indexesWithData.length
 
+    # Play audio nodes
+    play = new PlayCommands scope
+
     indexesWithData.forEach (idx) ->
       # Read audio nodes into scope
       scope.audionodes[idx] = input.getData ['audionodes', idx]
-
-    # Play audio nodes
-    play = new PlayCommands scope
-    play.parse scope.audionodes
+      # Parse each audio node
+      if scope.audionodes[idx] instanceof Array
+        play.parse scope.audionodes[idx]
+      else
+        play.parse [scope.audionodes[idx]]
 
     return
