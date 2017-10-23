@@ -12,7 +12,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "noflo": "~0.x >= 0.5"
+    "noflo": "~0.x >= 0.8",
+    "noflo-helper-arrayable": "^0.1.1"
   },
   "devDependencies": {
     "chai": "^4.0.0",

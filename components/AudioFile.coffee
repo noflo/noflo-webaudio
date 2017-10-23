@@ -1,9 +1,7 @@
 noflo = require 'noflo'
-{Primative} = require '../lib/Primative'
+ArrayableHelper = require 'noflo-helper-arrayable'
 
-# @runtime noflo-browser
-
-class AudioFile extends Primative
+class AudioFile extends noflo.Component
   description: 'Create an audio source loading a sound file'
   icon: 'file-audio-o'
   constructor: ->
@@ -22,6 +20,6 @@ class AudioFile extends Primative
         datatype: 'number'
         description: 'schedules to stop at an exact time'
 
-    super 'audiofile', ports
+    ArrayableHelper @, 'audiofile', ports
 
 exports.getComponent = -> new AudioFile

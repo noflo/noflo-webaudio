@@ -1,9 +1,7 @@
 noflo = require 'noflo'
-{Primative} = require '../lib/Primative'
+ArrayableHelper = require 'noflo-helper-arrayable'
 
-# @runtime noflo-browser
-
-class Chorus extends Primative
+class Chorus extends noflo.Component
   description: 'Basic chorus effect (TUNA)'
   icon: 'group'
   constructor: ->
@@ -30,6 +28,6 @@ class Chorus extends Primative
         description: '(0 or 1)'
         required: true
 
-    super 'chorus', ports
+    ArrayableHelper @, 'chorus', ports
 
 exports.getComponent = -> new Chorus

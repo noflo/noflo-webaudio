@@ -1,9 +1,7 @@
 noflo = require 'noflo'
-{Primative} = require '../lib/Primative'
+ArrayableHelper = require 'noflo-helper-arrayable'
 
-# @runtime noflo-browser
-
-class Panner extends Primative
+class Panner extends noflo.Component
   description: 'Changes the location of a given audio source'
   icon: 'compass'
   constructor: ->
@@ -18,6 +16,6 @@ class Panner extends Primative
         description: 'a 2D or 3D point'
         required: true
 
-    super 'panner', ports
+    ArrayableHelper @, 'panner', ports
 
 exports.getComponent = -> new Panner

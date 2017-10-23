@@ -1,9 +1,7 @@
 noflo = require 'noflo'
-{Primative} = require '../lib/Primative'
+ArrayableHelper = require 'noflo-helper-arrayable'
 
-# @runtime noflo-browser
-
-class Convolver extends Primative
+class Convolver extends noflo.Component
   description: 'Applies impulse response data to a given audio signal'
   icon: 'share-alt'
   constructor: ->
@@ -18,6 +16,6 @@ class Convolver extends Primative
         description: 'impulse response filepath'
         required: true
 
-    super 'convolver', ports
+    ArrayableHelper @, 'convolver', ports
 
 exports.getComponent = -> new Convolver

@@ -1,9 +1,7 @@
 noflo = require 'noflo'
-{Primative} = require '../lib/Primative'
+ArrayableHelper = require 'noflo-helper-arrayable'
 
-# @runtime noflo-browser
-
-class Gain extends Primative
+class Gain extends noflo.Component
   description: 'Multiplies the input audio signal by the given gain value, ' +
                'changing its amplitude.'
   icon: 'filter'
@@ -19,6 +17,6 @@ class Gain extends Primative
         description: 'amount of gain to apply (0...1)'
         required: true
 
-    super 'gain', ports
+    ArrayableHelper @, 'gain', ports
 
 exports.getComponent = -> new Gain
