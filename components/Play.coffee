@@ -162,4 +162,5 @@ exports.getComponent = ->
       else
         play.parse [scope.audionodes[idx]]
 
+    output.done()
     return
