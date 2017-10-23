@@ -1,9 +1,7 @@
 noflo = require 'noflo'
-{Primative} = require '../lib/Primative'
+ArrayableHelper = require 'noflo-helper-arrayable'
 
-# @runtime noflo-browser
-
-class Oscillator extends Primative
+class Oscillator extends noflo.Component
   description: 'Create an audio source with a periodic waveform ' +
                '(sine, square, sawtooth, triangle, custom)'
   icon: 'volume-up'
@@ -24,6 +22,6 @@ class Oscillator extends Primative
         datatype: 'number'
         description: 'schedules to stop at an exact time'
 
-    super 'oscillator', ports
+    ArrayableHelper @, 'oscillator', ports
 
 exports.getComponent = -> new Oscillator

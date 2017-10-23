@@ -1,9 +1,7 @@
 noflo = require 'noflo'
-{Primative} = require '../lib/Primative'
+ArrayableHelper = require 'noflo-helper-arrayable'
 
-# @runtime noflo-browser
-
-class MakeTime extends Primative
+class MakeTime extends noflo.Component
   description: 'Creates one or more time events'
   icon: 'clock-o'
   constructor: ->
@@ -18,6 +16,6 @@ class MakeTime extends Primative
         datatype: 'number'
         description: 'how long (ms)'
 
-    super 'time', ports
+    ArrayableHelper @, 'time', ports
 
 exports.getComponent = -> new MakeTime
