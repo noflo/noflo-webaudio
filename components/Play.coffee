@@ -126,8 +126,23 @@ exports.getComponent = ->
 
   c.scopes = {}
   c.tearDown = (callback) ->
-    c.scopes = {}
-    do callback
+    scopes = Object.keys c.scopes
+    unless scopes.length
+      do callback
+      return
+    scope = scopes[0]
+    unless c.scopes[scope]?.context
+      # Already torn down
+      delete c.scopes[scope]
+      c.tearDown callback
+      return
+    c.scopes[scope].context.close()
+      .then ->
+        delete c.scopes[scope]
+        c.tearDown callback
+      , (err) ->
+        callback err
+    return
 
   ensureScope = (scope) ->
     unless c.scopes[scope]
