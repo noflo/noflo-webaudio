@@ -8,11 +8,7 @@ class PlayCommands
     @context = scope.context
 
   parse: (audionodes) =>
-    # Walks just on current i-th arrayport
-    if @audionodes[i] instanceof Array
-      @walk @audionodes[i], 0
-    else
-      @walk [@audionodes[i]], 0
+    @walk audionodes, 0
 
   # Recursively walk through the AudioNodes' graph and connect them
   walk: (audionodes, level) =>
