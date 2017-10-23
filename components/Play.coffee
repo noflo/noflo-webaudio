@@ -128,8 +128,8 @@ class PlayCommands
 
 exports.getComponent = ->
   c = new noflo.Component
-  c.description: 'Plays given chains and patterns'
-  c.icon: 'play'
+  c.description = 'Plays given chains and patterns'
+  c.icon = 'play'
   c.inPorts.add 'audionodes',
     datatype: 'object'
     addressable: true
