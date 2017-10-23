@@ -33,10 +33,10 @@ class PlayCommands
         return created
 
   create: (audionode) =>
-    return @parse audionode
+    return @parseCommand audionode
 
   # noflo-canvas legacy
-  parse: (commands) =>
+  parseCommand: (commands) =>
     return unless @context
     @parseThing commands
 
