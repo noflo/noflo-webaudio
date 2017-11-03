@@ -5,6 +5,7 @@ class MakeTime extends noflo.Component
   description: 'Creates one or more time events'
   icon: 'clock-o'
   constructor: ->
+    super()
     ports =
       time:
         datatype: 'number'

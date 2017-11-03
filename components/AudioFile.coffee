@@ -5,6 +5,7 @@ class AudioFile extends noflo.Component
   description: 'Create an audio source loading a sound file'
   icon: 'file-audio-o'
   constructor: ->
+    super()
     ports =
       file:
         datatype: 'string'

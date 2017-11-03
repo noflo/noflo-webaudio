@@ -5,6 +5,7 @@ class Chorus extends noflo.Component
   description: 'Basic chorus effect (TUNA)'
   icon: 'group'
   constructor: ->
+    super()
     ports =
       audionodes:
         datatype: 'object'

@@ -6,6 +6,7 @@ class Oscillator extends noflo.Component
                '(sine, square, sawtooth, triangle, custom)'
   icon: 'volume-up'
   constructor: ->
+    super()
     ports =
       waveform:
         datatype: 'string'

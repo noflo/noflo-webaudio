@@ -6,6 +6,7 @@ class Gain extends noflo.Component
                'changing its amplitude.'
   icon: 'filter'
   constructor: ->
+    super()
     ports =
       audionodes:
         datatype: 'object'
