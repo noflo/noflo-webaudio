@@ -5,6 +5,7 @@ class Convolver extends noflo.Component
   description: 'Applies impulse response data to a given audio signal'
   icon: 'share-alt'
   constructor: ->
+    super()
     ports =
       audionodes:
         datatype: 'object'

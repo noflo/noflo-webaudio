@@ -5,6 +5,7 @@ class Panner extends noflo.Component
   description: 'Changes the location of a given audio source'
   icon: 'compass'
   constructor: ->
+    super()
     ports =
       audionodes:
         datatype: 'object'
